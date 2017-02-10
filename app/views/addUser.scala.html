@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add User</title>
+</head>
+<body>
+
+  <div class="main">
+    <div class="one">
+      <div class="register">
+        <h3>Create your Account</h3>
+        <form id="reg-form" action='@routes.UserController.register()'  method = "post">
+          <div>
+            <label>Name</label>
+            <input type="text" id="name" name="name" placeholder="e.g: Diego Armando Maradona" required/>
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="text" id="email" name="email" placeholder="e.g: eldiegote" required/>
+          </div>
+          <div>
+            <label>Password</label>
+            <input type="password" id="password" name="password" required/>
+          </div>
+            <button type="submit" value="Create User"></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index
+# An example controller showing how to use dependency injection
+GET     /count                      controllers.CountController.count
+# An example controller showing how to write asynchronous code
+GET     /message             controllers.AsyncController.message
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file        controllers.Assets.versioned(path="/public", file)
+
+#My java routes
+GET     /addUser                 controllers.UserController.addUser()
+POST    /user                    controllers.UserController.register()
+GET     /user/email/:email       controllers.UserController.getUserByEmail(email: String)
+GET     /user/:id                controllers.UserController.getUserById(id: Int)
+GET     /users                   controllers.UserController.getUsers
+DELETE  /user/:id                controllers.UserController.deleteUser(id: Int)
+PUT     /user/:id                controllers.UserController.updateUser(id: Int)
+
+#My scala routes
+GET     /scala/user/:id              controllers.UserControllerScala.getUserById(id: Int)
+GET     /scala/user/email/:email     controllers.UserControllerScala.getUserByEmail(email: String)

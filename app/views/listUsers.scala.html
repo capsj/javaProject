@@ -1,0 +1,27 @@
+@import java.util
+
+@import model.ebean.User
+
+@(users: util.List[User])
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @* Here's where we render the page title `String`. *@
+        <h2>User List</h2>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+    </head>
+
+    <div class="container">
+        <h2>User List</h2>
+    </div>
+
+    @for(user <- users){
+        Id:  @user.getId() <br>
+        Name: @user.getName() <br>
+        Email: @user.getEmail() <br>
+        Password: @user.getPassword() <br>
+        <--------------------> <br>
+        }
+
+</html>
